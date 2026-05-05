@@ -614,9 +614,29 @@ footer .footer-tag {
 }
 
 @media (max-width: 768px) {
-  .hero, section { padding: 60px 24px; }
-  .promesse-grid, .offre-grid { grid-template-columns: 1fr; }
-  .hero-meta { flex-wrap: wrap; gap: 24px; }
-  .claude-block { padding: 40px 24px; }
+  .hero, section { padding: 40px 20px; }
+  .promesse-grid, .offre-grid, .programme-grid { 
+    grid-template-columns: 1fr !important; 
+    gap: 20px !important;
+  }
+  .hero-meta { flex-wrap: wrap; gap: 20px; }
+  .claude-block { padding: 30px 20px; }
   footer { flex-direction: column; gap: 16px; text-align: center; }
+  
+  .logo-container {
+    width: 160px;
+    height: 160px;
+  }
+  .logo-img {
+    width: 120px;
+  }
+  
+  h1 { font-size: 42px !important; }
+  .hero-sub { font-size: 16px !important; }
+  
+  .cart-summary {
+    padding: 20px !important;
+  }
+  .total-label { font-size: 20px !important; }
+  .total-price { font-size: 24px !important; }
 }
