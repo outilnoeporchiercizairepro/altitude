@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap');
+
 :root {
   --black: #ffffff;
   --white: #0a0a0a;
@@ -8,6 +10,7 @@
   --slate: #f8f8fa;
   --muted: #666666;
   --border: rgba(0, 71, 255, 0.1);
+  --font-corporate: 'Outfit', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

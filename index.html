@@ -3,198 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Altitude — Offre Ambassadeur</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <title>Altitude — Webinaire Exclusif</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Custom styles for the "Cart" look */
-    .cart-summary {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      margin-top: 40px;
-    }
-    .cart-item {
+    .webinar-hero {
+      min-height: 100vh;
       display: flex;
-      justify-content: space-between;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .cart-item:last-child {
-      border-bottom: none;
-    }
-    .cart-label {
-      font-weight: 500;
-      color: var(--white);
-    }
-    .cart-price {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-    }
-    .discount {
-      color: #e00000;
-    }
-    .total-row {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 24px;
-      margin-top: 16px;
-      border-top: 2px solid var(--white);
-    }
-    .total-label {
-      font-family: 'Syne', sans-serif;
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--white);
-    }
-    .total-price {
-      font-family: 'Syne', sans-serif;
-      font-size: 32px;
-      font-weight: 800;
-      background: var(--accent);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .logo-container {
-      background: #000;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 48px;
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--black);
     }
-    .logo-img {
-      width: 200px;
-      height: auto;
-      display: block;
+    
+    .webinar-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      padding: 60px 40px;
+      border-radius: 24px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    input[type="email"],
+    input[type="text"] {
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--slate);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--white);
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    
+    input[type="email"]:focus,
+    input[type="text"]:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(0, 71, 255, 0.1);
+    }
+    
+    .submit-btn {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .date-tag {
+      background: rgba(0, 71, 255, 0.1);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-family: var(--font-corporate);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 24px;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
 
-<section class="hero" style="min-height: auto; padding: 60px 24px; text-align: center;">
-  <div class="logo-container">
-    <img src="logoaltitude.png" alt="Altitude Logo" class="logo-img">
+<section class="webinar-hero">
+  <div class="logo-container" style="width: 120px; height: 120px; margin-bottom: 32px;">
+    <img src="logoaltitude.png" alt="Altitude Logo" style="width: 80px;">
   </div>
-  <h1 style="font-size: clamp(40px, 6vw, 72px);">Finalise ton accès<br><span>Ambassadeur</span></h1>
-  <p class="hero-sub" style="margin: 0 auto 40px;">Récupère 14h par semaine en 30 jours. 10 places disponibles uniquement.</p>
-  <a href="#payment" class="cta-btn">Accéder au paiement sécurisé</a>
-</section>
-
-<section style="padding: 60px 24px; max-width: 800px; margin: 0 auto;">
-
-  <div class="section-label">Le Programme Altitude</div>
-  <div class="programme-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px;">
-    <div style="border-left: 3px solid var(--primary); padding-left: 20px;">
-      <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; margin-bottom: 8px;">📚 3h de Contenu Expert</h3>
-      <p style="font-size: 14px; color: var(--muted);">Le condensé de mes méthodes d'audit et d'implémentation IA. Pas de blabla, uniquement des systèmes que tu peux copier-coller dans ton business dès aujourd'hui.</p>
-    </div>
-    <div style="border-left: 3px solid var(--secondary); padding-left: 20px;">
-      <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; margin-bottom: 8px;">🤝 Accompagnement de 3 mois</h3>
-      <p style="font-size: 14px; color: var(--muted);">Tu n'es pas seul face à tes vidéos. On se retrouve 2 fois par semaine en groupe pour débloquer tes process et ajuster tes outils IA en direct.</p>
-    </div>
-    <div style="border-left: 3px solid var(--primary); padding-left: 20px;">
-      <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; margin-bottom: 8px;">💎 Coaching 1-to-1 Exclusif</h3>
-      <p style="font-size: 14px; color: var(--muted);">Une heure entière avec moi pour auditer ton système personnel. Cette session est réservée uniquement aux 10 premiers ambassadeurs.</p>
-    </div>
-    <div style="border-left: 3px solid var(--secondary); padding-left: 20px;">
-      <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; margin-bottom: 8px;">💬 Avis sur tes modules</h3>
-      <p style="font-size: 14px; color: var(--muted);">Chaque étape de ton implémentation est revue. Tu reçois mes feedbacks directement sur ton espace de cours pour ne jamais avancer dans le flou.</p>
-    </div>
-  </div>
-
-  <div style="margin-top: 60px; padding: 40px; background: var(--slate); border-radius: 16px;">
-    <div class="section-label">La Méthode M.A.R.R.E</div>
-    <h2 style="font-size: 32px; margin-bottom: 32px;">Ton plan d'action en 5 étapes</h2>
-    <div style="display: flex; flex-direction: column; gap: 20px;">
-      <div style="display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: start;">
-        <span style="font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--primary);">M</span>
-        <div><strong style="display: block; font-size: 18px; margin-bottom: 4px;">Micro Audit</strong><p style="font-size: 14px; color: var(--muted);">On cartographie tes 14h de perte de temps hebdomadaire.</p></div>
-      </div>
-      <div style="display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: start;">
-        <span style="font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--secondary);">A</span>
-        <div><strong style="display: block; font-size: 18px; margin-bottom: 4px;">Analyse</strong><p style="font-size: 14px; color: var(--muted);">On priorise les tâches à haute valeur ajoutée.</p></div>
-      </div>
-      <div style="display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: start;">
-        <span style="font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--primary);">R</span>
-        <div><strong style="display: block; font-size: 18px; margin-bottom: 4px;">Réduction</strong><p style="font-size: 14px; color: var(--muted);">On élimine le superflu avant même de toucher à l'IA.</p></div>
-      </div>
-      <div style="display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: start;">
-        <span style="font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--secondary);">R</span>
-        <div><strong style="display: block; font-size: 18px; margin-bottom: 4px;">Robotisation</strong><p style="font-size: 14px; color: var(--muted);">On délègue à ton collaborateur IA (Claude) les tâches répétitives.</p></div>
-      </div>
-      <div style="display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: start;">
-        <span style="font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--primary);">E</span>
-        <div><strong style="display: block; font-size: 18px; margin-bottom: 4px;">Évaluation</strong><p style="font-size: 14px; color: var(--muted);">On mesure le temps gagné et on pérennise le système.</p></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="text-align: center; margin-top: 48px;">
-    <a href="#payment" class="cta-btn">Réserver ma place Ambassadeur</a>
-  </div>
-
-  <div id="payment" class="cart-summary">
-    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border-bottom: 2px solid var(--white); padding-bottom: 12px;">
-      <h3 style="font-family: 'Syne', sans-serif; margin: 0;">🛒 Récapitulatif de commande</h3>
-      <span style="font-size: 12px; color: var(--muted);">ID: #ALT-AMB-2026</span>
-    </div>
+  
+  <div class="webinar-card fade-in">
+    <div class="date-tag">Dimanche 17 Mai • 20h30</div>
+    <h1 style="font-family: var(--font-corporate); font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin-bottom: 20px;">
+      Comment gagner <span>14 heures</span> par semaine grâce à l'IA en 2026
+    </h1>
+    <p class="hero-sub" style="margin: 0 auto; color: var(--muted);">
+      Inscrivez-vous pour recevoir le lien d'accès direct et transformer votre productivité.
+    </p>
     
-    <div class="cart-item">
-      <span class="cart-label">Programme Altitude (Accès complet)</span>
-      <span class="cart-price">5 000,00 € HT</span>
-    </div>
+    <form id="webinarForm" class="form-group">
+      <input type="text" id="firstName" placeholder="Ton prénom" required>
+      <input type="email" id="email" placeholder="Ton adresse email professionnelle" required>
+      <button type="submit" class="cta-btn submit-btn">Réserver ma place gratuitement</button>
+    </form>
     
-    <div class="cart-item">
-      <span class="cart-label">Offre de lancement (Early Bird)</span>
-      <span class="cart-price discount">- 2 500,00 €</span>
-    </div>
-    
-    <div class="cart-item">
-      <span class="cart-label">Code Promo : AMBASSADEUR</span>
-      <span class="cart-price discount">- 1 000,00 €</span>
-    </div>
-    
-    <div class="cart-item">
-      <span class="cart-label">Bonus Fondateur (Immédiat)</span>
-      <span class="cart-price discount">- 503,00 €</span>
-    </div>
-    
-    <div class="total-row">
-      <span class="total-label">TOTAL</span>
-      <span class="total-price">997,00 € HT</span>
-    </div>
-
-    <div style="background: rgba(0, 71, 255, 0.05); padding: 12px; border-radius: 8px; margin-top: 24px; border: 1px dashed var(--primary); text-align: center;">
-      <span style="color: var(--primary); font-weight: 700; font-size: 14px;">⚡ Vous économisez 4 003,00 € aujourd'hui</span>
-    </div>
-
-    <div style="margin-top: 32px; text-align: center;">
-      <a href="https://payment-links.mollie.com/payment/MgirK7pV7hpfDQvLgQJQK" class="cta-btn" style="width: 100%; justify-content: center;">Confirmer et Payer</a>
-      <p style="margin-top: 16px; font-size: 12px; color: var(--muted);">Paiement sécurisé par Mollie. Accès envoyé par email instantanément.</p>
-    </div>
+    <p style="margin-top: 24px; font-size: 12px; color: var(--muted);">
+      🔒 Vos données restent privées. Pas de spam, promis.
+    </p>
   </div>
 </section>
 
-<section style="padding: 40px 24px; text-align: center; border-bottom: none;">
-  <p style="font-size: 14px; color: var(--muted);">Plus que <span style="color: var(--primary); font-weight: 700;">7 places</span> disponibles sur ce tarif.</p>
-  <div style="display: flex; justify-content: center; gap: 8px; margin-top: 16px;">
-    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-    <div class="dot empty"></div><div class="dot empty"></div><div class="dot empty"></div><div class="dot empty"></div><div class="dot empty"></div><div class="dot empty"></div><div class="dot empty"></div>
-  </div>
-</section>
+<script>
+  document.getElementById('webinarForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const firstName = document.getElementById('firstName').value;
+    const submitBtn = e.target.querySelector('button');
+    
+    if (email && firstName) {
+      // Loading state
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = 'Envoi en cours...';
+      submitBtn.disabled = true;
 
-<footer style="padding: 40px 24px; justify-content: center;">
-  <div style="text-align: center;">
-    <div class="footer-brand">Noé Porchier-Cizaire · Altitude</div>
-    <div class="footer-tag" style="margin-top: 8px;">2026 © Tous droits réservés.</div>
-  </div>
-</footer>
+      try {
+        await fetch('https://n8n.prcz.fr/webhook-test/webi-ac', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ 
+            email, 
+            firstName,
+            source: 'webinaire_2026',
+            date: new Date().toISOString()
+          }),
+        });
+      } catch (error) {
+        console.error('Webhook error:', error);
+        // We still redirect even if webhook fails to not block the user
+      } finally {
+        window.location.href = 'webinaire-merci.html';
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
