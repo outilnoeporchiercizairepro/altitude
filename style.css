@@ -581,14 +581,33 @@ h2 em {
   margin: 0 auto 48px;
 }
 
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 18px 48px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
 .cta-btn.calendar-btn {
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
   border: 1px solid var(--primary);
 }
 
 .cta-btn.calendar-btn:hover {
-  background: var(--white);
+  background: #ffffff;
   color: var(--primary);
 }
 
