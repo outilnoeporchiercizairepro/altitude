@@ -81,6 +81,49 @@
       gap: 16px;
       margin-top: 24px;
     }
+
+    /* WhatsApp floating widget */
+    .wa-widget {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 22px 12px 14px;
+      background: #25D366;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 100px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .wa-widget:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(37, 211, 102, 0.6);
+    }
+
+    .wa-widget svg {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 480px) {
+      .wa-widget {
+        bottom: 16px;
+        right: 16px;
+        padding: 12px;
+      }
+      .wa-widget .wa-label {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -114,6 +157,13 @@
     </div>
   </div>
 </section>
+
+<a href="https://link.prcz.fr/le-cockpit/" target="_blank" rel="noopener" class="wa-widget" aria-label="Rejoindre le groupe WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16.004 0h-.008C7.174 0 .002 7.174.002 16c0 3.5 1.128 6.744 3.046 9.376L1.05 31.5l6.33-2.024A15.93 15.93 0 0 0 16.004 32C24.83 32 32 24.826 32 16S24.83 0 16.004 0zm9.32 22.594c-.386 1.09-1.92 1.994-3.142 2.258-.836.178-1.928.32-5.604-1.204-4.7-1.948-7.726-6.724-7.962-7.034-.226-.31-1.9-2.53-1.9-4.826 0-2.296 1.166-3.424 1.636-3.904.386-.394.844-.574 1.122-.574.13 0 .246.006.35.012.302.012.454.03.654.51.248.602.856 2.098.93 2.252.076.154.152.362.05.572-.096.216-.18.31-.334.49-.154.18-.3.318-.454.51-.14.166-.3.346-.128.642.172.29.764 1.26 1.64 2.04 1.13 1.006 2.04 1.318 2.366 1.454.244.102.534.078.71-.11.224-.242.5-.644.78-1.04.2-.284.452-.32.718-.22.27.094 1.706.804 2 .95.294.146.488.218.56.34.072.124.072.71-.314 1.8z"/>
+  </svg>
+  <span class="wa-label">Rejoindre le groupe WhatsApp</span>
+</a>
 
 </body>
 </html>
